@@ -2,6 +2,7 @@ import React from 'react';
 import ScrollingFeed from './ScrollingFeed';
 import ScrollingFeedLock from './ScrollingFeedLock';
 import ScrollingFeedRWLock from './ScrollingFeedRWLock';
+import Upload from './Upload';
 import { Segment, Button } from 'semantic-ui-react';
 import './App.css';
 
@@ -21,11 +22,13 @@ class App extends React.Component {
         </header>
         <Segment>
           <Button onClick={() => this.setMode('normal')} active={mode === 'normal'}>Normal</Button>
+          <Button onClick={() => this.setMode('upload')} active={mode === 'upload'}>Upload</Button>
           <Button onClick={() => this.setMode('simple')} active={mode === 'simple'}>Simple Lock</Button>
           <Button onClick={() => this.setMode('rw')} active={mode === 'rw'}>R/W Lock</Button>
         </Segment>
         {mode === 'normal' && <ScrollingFeed/>}
         {mode === 'simple' && <ScrollingFeedLock/>}
+        {mode === 'upload' && <Upload/>}
         {mode === 'rw' && <ScrollingFeedRWLock/>}
       </div>
     );
