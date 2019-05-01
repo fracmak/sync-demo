@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import { Feed } from 'semantic-ui-react'
+import { Feed, Transition } from 'semantic-ui-react'
 import { Lock } from 'synchronization';
 import eventsFixtures from './events';
 
@@ -38,10 +38,10 @@ export default class ScrollingFeed extends React.Component {
   render() {
     const { events, numWriters } = this.state;
     return (
-      <Feed onMouseEnter={this.lock} onMouseLeave={this.unlock}>
+      <Transition.Group as={Feed} duration={500} onMouseEnter={this.lock} onMouseLeave={this.unlock}>
         <Feed.Event style={{height: '20px'}}>{numWriters > 0 && <Feed.Summary>{numWriters} New Messages</Feed.Summary>}</Feed.Event>
         {events}
-      </Feed>
+      </Transition.Group>
     )
   }
 }

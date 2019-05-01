@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
     "semantic-ui-react": "^0.86.0",
-    "synchronization": "^1.0.0"
+    "synchronization": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

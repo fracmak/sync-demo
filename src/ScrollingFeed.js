@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import { Feed } from 'semantic-ui-react'
+import { Feed, Transition } from 'semantic-ui-react'
 import eventsFixtures from './events';
 
 let id = 5;
@@ -24,10 +24,10 @@ export default class ScrollingFeed extends React.Component {
   render() {
     const { events, numWriters } = this.state;
     return (
-      <Feed>
+      <Transition.Group as={Feed} duration={500}>
         <Feed.Event style={{height: '20px'}}>{numWriters > 0 && <Feed.Summary>{numWriters} New Messages</Feed.Summary>}</Feed.Event>
         {events}
-      </Feed>
+      </Transition.Group>
     )
   }
 }
