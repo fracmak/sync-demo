@@ -9003,6 +9003,11 @@ symbol-tree@^3.2.2:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
   integrity sha1-rifbOPZgp64uHDt9G8KQgZuFGeY=
 
+synchronization@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/synchronization/-/synchronization-1.0.0.tgz#46829997b4190cddd6d99d4b627bb72a0e1d7536"
+  integrity sha512-20dD+VTdyHfnSjRwUehczlx6DX4wmh5YlrcYUhKcTyZ3OJlpBD+amI7wtWv+2Ps3IdYv+VpxxUPnWxUXc4p+HQ==
+
 table@^5.2.3:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/table/-/table-5.2.3.tgz#cde0cc6eb06751c009efab27e8c820ca5b67b7f2"
