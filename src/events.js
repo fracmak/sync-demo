@@ -3,9 +3,9 @@ import { Feed, Icon } from 'semantic-ui-react';
 
 export default [
   (
-    <Feed.Event>
+    <Feed.Event key="event0">
       <Feed.Label>
-        <img src='/images/avatar/small/elliot.jpg'/>
+        <img src='/images/avatar/small/elliot.jpg' alt="" />
       </Feed.Label>
       <Feed.Content>
         <Feed.Summary>
@@ -22,19 +22,19 @@ export default [
     </Feed.Event>
   ),
   (
-    <Feed.Event>
+    <Feed.Event key="event1">
       <Feed.Label image='/images/avatar/small/helen.jpg'/>
       <Feed.Content>
         <Feed.Summary>
-          <a>Helen Troy</a> added <a>2 new illustrations</a>
+          <a href="/">Helen Troy</a> added <a href="/">2 new illustrations</a>
           <Feed.Date>4 days ago</Feed.Date>
         </Feed.Summary>
         <Feed.Extra images>
-          <a>
-            <img src='/images/wireframe/image.png'/>
+          <a href="/">
+            <img src='/images/wireframe/image.png' alt="" />
           </a>
-          <a>
-            <img src='/images/wireframe/image.png'/>
+          <a href="/">
+            <img src='/images/wireframe/image.png' alt="" />
           </a>
         </Feed.Extra>
         <Feed.Meta>
@@ -47,7 +47,7 @@ export default [
     </Feed.Event>
   ),
   (
-    <Feed.Event>
+    <Feed.Event key="event2">
       <Feed.Label image='/images/avatar/small/jenny.jpg'/>
       <Feed.Content>
         <Feed.Summary date='2 Days Ago' user='Jenny Hess' content=' add you as a friend'/>
@@ -61,11 +61,11 @@ export default [
     </Feed.Event>
   ),
   (
-    <Feed.Event>
+    <Feed.Event key="event3">
       <Feed.Label image='/images/avatar/small/joe.jpg'/>
       <Feed.Content>
         <Feed.Summary>
-          <a> Joe Henderson </a> posted on his page
+          <a href="/"> Joe Henderson </a> posted on his page
           <Feed.Date>3 days ago</Feed.Date>
         </Feed.Summary>
         <Feed.Extra text>
@@ -82,19 +82,19 @@ export default [
     </Feed.Event>
   ),
   (
-    <Feed.Event>
+    <Feed.Event key="event4">
       <Feed.Label image='/images/avatar/small/justen.jpg'/>
       <Feed.Content>
         <Feed.Summary>
-          <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+          <a href="/">Justen Kitsune</a> added <a href="/">2 new photos</a> of you
           <Feed.Date>4 days ago</Feed.Date>
         </Feed.Summary>
         <Feed.Extra images>
-          <a>
-            <img src='/images/wireframe/image.png'/>
+          <a href="/">
+            <img src='/images/wireframe/image.png' alt="" />
           </a>
-          <a>
-            <img src='/images/wireframe/image.png'/>
+          <a href="/">
+            <img src='/images/wireframe/image.png' alt="" />
           </a>
         </Feed.Extra>
         <Feed.Meta>

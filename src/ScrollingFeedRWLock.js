@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import { Feed, Button } from 'semantic-ui-react'
 import { ReadWriteBarrier } from 'synchronization';
 import eventsFixtures from './events';
+
+let id = 5;
 
 export default class ScrollingFeed extends React.Component {
   state = {
@@ -14,9 +16,10 @@ export default class ScrollingFeed extends React.Component {
     this.interval = setInterval(async () => {
       this.setState(({ numWriters }) => ({ numWriters: numWriters + 1 }));
       await this.barrier.write();
+      let newEvent = cloneElement(eventsFixtures[Math.floor(Math.random() * eventsFixtures.length)], { key: `event${id++}` });
       this.setState(({ numWriters, events }) => ({
         numWriters: numWriters - 1,
-        events: [eventsFixtures[Math.floor(Math.random() * eventsFixtures.length)], ...events.slice(0, events.length - 1)]
+        events: [newEvent, ...events.slice(0, events.length - 1)]
       }));
     }, 1000)
   }
